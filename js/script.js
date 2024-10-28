@@ -55,12 +55,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       }
   
       if (isValid) {
-          // Log the data to the console
-          console.log('First Name:', firstName);
-          console.log('Last Name:', lastName);
-          console.log('Email:', email);
-          console.log('Phone Number:', phone);
-          console.log('Password:', password);
+          // Create an object to store the form data
+    const formData = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone,
+        password: password
+    };
+    
+    // Log the object to the console
+    console.log('Form Data:', formData);
   
           // You can add more complex validation and data handling here, like sending data to a server
           alert('Form submitted successfully!');
